@@ -1,6 +1,12 @@
-import React from 'react';
-import Skeleton from 'react-loading-skeleton';
+import React from "react";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
-export default function App() {
-    return <Skeleton />;
+export default function App({ Component, pageProps }) {
+  return (
+    <div>
+      <Skeleton />
+      <Component {...pageProps} />
+    </div>
+  );
 }
